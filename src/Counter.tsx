@@ -36,6 +36,10 @@ export default function Counter() {
       featureKey: "enable_counter",
     });
 
+    if (!isActive) {
+      return false;
+    }
+
     console.log("is active", isActive);
 
     const variation = getVariation({
